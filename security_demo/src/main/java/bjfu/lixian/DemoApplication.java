@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @author lixian
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 //表示此Controller提供rest服务
 @RestController
+@EnableSwagger2
 public class DemoApplication {
 
     /**
