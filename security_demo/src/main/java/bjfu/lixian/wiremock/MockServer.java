@@ -12,7 +12,6 @@ import java.io.IOException;
  */
 public class MockServer {
     public static void main(String[] args)  {
-        FileUtils.deleteQuietly(new File("D://gogo"));
 
     }
 }

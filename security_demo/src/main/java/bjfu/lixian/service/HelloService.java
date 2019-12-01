@@ -1,14 +1,9 @@
-/**
- * 
- */
-package bjfu.lixian.service;
+package bjfu.lixian.Service;
 
 /**
- * @author zhailiang
- *
+ * @author lixian
+ * @create 2019-11-30
  */
 public interface HelloService {
-	
-	String greeting(String name);
-
+    public String greeting(String name);
 }

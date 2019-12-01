@@ -1,6 +1,3 @@
-/**
- * 
- */
 package bjfu.lixian.validator;
 
 import javax.validation.Constraint;
@@ -11,18 +8,20 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * @author zhailiang
- *
+ * @author lixian
+ * @create 2019-11-30
  */
-@Target({ElementType.METHOD, ElementType.FIELD})
+//可以作用于方法和字段
+@Target({ElementType.METHOD,ElementType.FIELD})
+//运行时注解
 @Retention(RetentionPolicy.RUNTIME)
+//由MyConstraintValidator完成校验逻辑
 @Constraint(validatedBy = MyConstraintValidator.class)
 public @interface MyConstraint {
-	
-	String message();
+//    自定义注解至少需要这几个参数
+    String message();
 
-	Class<?>[] groups() default { };
+    Class<?>[] groups() default{};
 
-	Class<? extends Payload>[] payload() default { };
-
+    Class<? extends Payload>[] payload() default {};
 }
